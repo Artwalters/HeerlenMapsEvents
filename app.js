@@ -1,5 +1,3 @@
-import "./app.css";
-
 /**
  * Main Application - Heerlen Interactive Map with Button Navigation
  * This code handles map initialization, marker-to-marker navigation, popups, and 3D models
