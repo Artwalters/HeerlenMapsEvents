@@ -1,4 +1,3 @@
-
 /**
  * Main Application - Heerlen Interactive Map with Button Navigation
  * This code handles map initialization, marker-to-marker navigation, popups, and 3D models
@@ -577,7 +576,7 @@ async function navigateMarkers(direction) {
       map.flyTo({
         center: coordinates,
         zoom: CONFIG.MARKER_ZOOM.large - 1,
-        offset: [0, 250],
+        offset: [0, 200],
         duration: 1500, // Duur van de animatie
         essential: true
       });
@@ -1058,7 +1057,7 @@ function showImagePopup(properties, coordinates, contentHeight, showCloseButton 
  
  const popup = new mapboxgl.Popup({
    offset: { 
-     bottom: [0, -5], 
+     bottom: [0, -10], 
      top: [0, 0], 
      left: [0, 0], 
      right: [0, 0] 
@@ -1170,7 +1169,7 @@ clip-path: polygon(calc(100% - 0px) 26.5px, calc(100% - 0px) calc(100% - 26.5px)
      // Create new main popup
      const mainPopup = new mapboxgl.Popup({
        offset: {
-         bottom: [0, -5],
+         bottom: [0, -10],
          top: [0, 0],
          left: [0, 0],
          right: [0, 0]
