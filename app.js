@@ -415,70 +415,7 @@ function addCustomMarkers() {
   markersAdded = true;
 }
 
-//! ============= MARKER NAVIGATION =============
-// Add navigation arrows
-// Vervang de bestaande navigatiepijl HTML met deze code
-const navHTML = `
-  <div class="marker-nav">
-    <div class="nav-arrow left" id="prev-marker">
-      <span class="arrow-icon">←</span>
-    </div>
-    <div class="nav-arrow right" id="next-marker">
-      <span class="arrow-icon">→</span>
-    </div>
-  </div>
-`;
-document.body.insertAdjacentHTML('beforeend', navHTML);
 
-// Vervang de bestaande CSS voor navigatiepijlen met deze styling
-const style = document.createElement('style');
-style.textContent = `
-  .marker-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    pointer-events: none;
-    z-index: 10;
-  }
-  
-  .nav-arrow {
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background-color: white;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    pointer-events: all;
-    transition: all 0.3s;
-  }
-  
-  .nav-arrow:hover { 
-    transform: translateY(-50%) scale(1.05);
-  }
-  
-  .arrow-icon {
-    font-size: 20px;
-    color: #333;
-    line-height: 1;
-  }
-  
-  .left { 
-    left: 5em; 
-  }
-  
-  .right { 
-    right: 5em; 
-  }
-`;
-document.head.appendChild(style);
 /**
  * Navigate to a marker
  * @param {string} direction - 'prev', 'next', or 'none' to stay at current marker
